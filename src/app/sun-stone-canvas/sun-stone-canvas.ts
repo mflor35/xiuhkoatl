@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, OnDestroy, ViewChild } from '@angular/core';
-import p5 from 'p5';
+import type p5 from 'p5';
 
 @Component({
   selector: 'app-sun-stone-canvas',
@@ -85,7 +85,8 @@ export class SunStoneCanvasComponent implements OnInit, OnDestroy {
       this.p5Instance.remove();
     }
   }
-  private instantiateP5(): void {
+  private async instantiateP5(): Promise<void> {
+    const { default: p5 } = await import('p5');
     const sketch = (s: p5) => {
       // 1. Current angles for the animation
       let currentOuterAngle = 0;
