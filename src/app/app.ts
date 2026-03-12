@@ -1,12 +1,12 @@
-import { Component, signal } from '@angular/core';
-import { SunStoneCanvasComponent } from './sun-stone-canvas/sun-stone-canvas';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './shared/header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [SunStoneCanvasComponent],
+  imports: [RouterOutlet, HeaderComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('xiuhkoatl');
-}
+export class App {}

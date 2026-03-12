@@ -1,0 +1,40 @@
+header {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+  padding: 0 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ccc;
+  display: block;
+  font-size: 0.9375rem;
+  padding: 1rem 0.75rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.15s,
+    border-color 0.15s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:focus-visible {
+  outline: 2px solid #c89632;
+  outline-offset: -2px;
+  border-radius: 2px;
+}
+
+nav a.active {
+  color: #c89632;
+  border-bottom-color: #c89632;
+}
